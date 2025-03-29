@@ -10,4 +10,9 @@ class UserModel {
   final String imageUrl;
 
   UserModel({required this.id, required this.name, required this.imageUrl});
+
+  factory UserModel.fromJson(Map<String, dynamic> json) =>
+      _$UserModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UserModelToJson(this);
 }
